@@ -1,7 +1,4 @@
-STATE VARIABLES 
-
 Concept:
-
 State variables are variables declared inside a Solidity contract, outside functions. Their values are stored on the blockchain and persist between function calls.
 
 Syntax:
