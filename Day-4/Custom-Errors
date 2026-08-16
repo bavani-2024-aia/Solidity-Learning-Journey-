@@ -1,0 +1,40 @@
+Concept
+  1.A custom error is a way to define our own error in a Solidity contract.
+  2.Instead of writing a long error message every time, we can create an error with a name and use it when needed.
+  3.Custom errors are also more **gas-efficient** than string error messages.
+
+Syntax
+
+error ErrorName();
+
+To use it:
+
+revert ErrorName();
+
+Example
+
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract CustomErrorExample {
+
+    error InsufficientBalance();
+
+    uint public balance = 100;
+
+    function withdraw(uint amount) public {
+        if (amount > balance) {
+            revert InsufficientBalance();
+        }
+
+        balance -= amount;
+    }
+}
+
+
+Use case :
+
+* We can create our own error using "error".
+* Custom errors are used with "revert".
+* They make error handling more clear.
+* They usually use less gas than long error strings.
