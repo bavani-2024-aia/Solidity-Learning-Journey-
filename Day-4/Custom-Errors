@@ -1,7 +1,7 @@
 Concept
   1.A custom error is a way to define our own error in a Solidity contract.
   2.Instead of writing a long error message every time, we can create an error with a name and use it when needed.
-  3.Custom errors are also more **gas-efficient** than string error messages.
+  3.Custom errors are also more gas-efficient than string error messages.
 
 Syntax
 
